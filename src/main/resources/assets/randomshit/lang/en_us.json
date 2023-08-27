@@ -1,0 +1,13 @@
+{
+  "item.randomshit.whynot" : "Why Not?",
+  "item.randomshit.donut": "D'oh! Nut",
+  "item.randomshit.config_portal": "Configurable Portal",
+  "item.randomshit.tnt_prop": "Tnt Propeller",
+  "item.randomshit.portable_enderchest": "Portable Enderchest",
+  "item.randomshit.inv_view": "Inventory Viewer",
+  "item.randomshit.auto_bridge" : "Auto Bridge",
+  "item.randomshit.discord_item" : "Discord Moderator",
+  "block.randomshit.whynot_ore" : "Why Not Ore",
+  "block.randomshit.weak_block" : "Weak Block",
+  "itemGroup.randomShitTab" : "Random Shit"
+}

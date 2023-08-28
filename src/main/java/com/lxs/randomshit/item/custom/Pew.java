@@ -7,6 +7,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.particles.IParticleData;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.minecraft.util.SoundEvents;
+import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.World;
 
 public class Pew extends Item {
@@ -17,9 +19,9 @@ public class Pew extends Item {
     @Override
     public ActionResult<ItemStack> onItemRightClick(World world, PlayerEntity playerEntity, Hand hand) {
         if (!playerEntity.world.isRemote) {
-            //playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.5F, 1.0F
-
-            //world.addEntity(bullet);
+            playerEntity.setHealth(1f);
+            playerEntity.playSound(SoundEvents.ENTITY_GENERIC_EXPLODE,0.5f,1f);
+            playerEntity.sendMessage(ITextComponent.getTextComponentOrEmpty("Not a good idea to point a gun at yourself dude"),playerEntity.getUniqueID());
         }
         return super.onItemRightClick(world, playerEntity, hand);
     }

@@ -20,17 +20,15 @@ public class ConfigPortal extends Item {
 
     @Override
     public ActionResultType onItemUseFirst(ItemStack stack, ItemUseContext context) {
-        if (!context.getPlayer().world.isRemote) {
+        if (!context.getPlayer().world.isRemote()) {
             World world = context.getWorld();
             PlayerEntity player = context.getPlayer();
             BlockState block = world.getBlockState(context.getPos());
-            if (world.isRemote) {
                 if (player.isCrouching()) {
                     shiftRightClickItem(stack, context, player, world);
                 } else {
                     rightClickItem(player, stack, world);
                 }
-            }
         }
         return super.onItemUseFirst(stack, context);
     }
